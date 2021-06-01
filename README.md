@@ -1,24 +1,36 @@
-# v3
-
-## Project setup
+# vue3-gradient-picker
+Vue3 gradient picker Inspired by [vue-gpickr](https://insky.github.io/vue-gpickr/)
+  
+### Usage
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+npm i vue3-gradient-picker
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+```js
+<template>
+  <vue-gpickr v-model="gradient" />
+</template>
 
-### Lints and fixes files
-```
-yarn lint
-```
+<script>
+import { VueGpickr, LinearGradient } from 'vue3-gradient-picker';
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+const gradient = new LinearGradient({
+  angle: 0,
+  stops: [
+    ['#0359b5', 0],
+    ['#f6ce01', 1]
+  ]
+});
+
+export default {
+  components: {
+    VueGpickr
+  },
+  data() {
+    return {
+      gradient
+    }
+  }
+};
+</script>
+```
