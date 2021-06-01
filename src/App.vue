@@ -4,7 +4,7 @@
 
 		<h1>vue-gpickr</h1>
 
-		<vue-gpickr class="gpickr" v-model="gradient" @input="test" />
+		<vue-gpickr class="gpickr" v-model="gradient" />
 
 		<br /><br />
 		<div class="text-left">
@@ -15,9 +15,7 @@
 </template>
 
 <script>
-import VueGpickr from "./gradient-picker/VueGpickr";
-import LinearGradient from "./gradient-picker/LinearGradient";
-
+import VueGpickr from "vue3-gradient-picker/src/gradient-picker/VueGpickr";
 export default {
 	components: {
 		VueGpickr

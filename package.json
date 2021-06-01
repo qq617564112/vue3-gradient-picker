@@ -1,6 +1,6 @@
 {
 	"name": "vue3-gradient-picker",
-	"version": "0.1.0",
+	"version": "0.1.4",
 	"private": false,
 	"scripts": {
 		"serve": "vue-cli-service serve",
@@ -12,7 +12,8 @@
 		"core-js": "^3.6.5",
 		"node-sass": "^6.0.0",
 		"tinycolor2": "^1.4.2",
-		"vue": "^3.0.0"
+		"vue": "^3.0.0",
+		"vue3-gradient-picker": "^0.1.4"
 	},
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "~4.5.0",
