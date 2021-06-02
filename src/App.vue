@@ -1,34 +1,21 @@
 <template>
 	<div class="wrapper">
-		<a class="github-fork-ribbon" href="https://github.com/insky/vue-gpickr" title="Fork me on GitHub">Fork me on GitHub</a>
-
-		<h1>vue-gpickr</h1>
-
-		<vue-gpickr class="gpickr" v-model="gradient" />
-
-		<br /><br />
-		<div class="text-left">
-			{{ gradient.toString() }}
-		</div>
-		<pre class="text-left">{{ JSON.stringify(gradient.toRaw(), null, "  ") }}</pre>
+		<gradient-picker class="gpickr" v-model="gradient" />
 	</div>
 </template>
 
 <script>
-import VueGpickr from "vue3-gradient-picker/src/gradient-picker/VueGpickr";
+import gradientPicker from "v3";
+// import LinearGradient from "./gradient-picker/LinearGradient";
+import { ref } from "vue";
 export default {
 	components: {
-		VueGpickr
+		gradientPicker
 	},
-	data() {
+	setup() {
+		const gradient = ref("");
 		return {
-			gradient: new LinearGradient({
-				angle: 0,
-				stops: [
-					["#0359b5", 0],
-					["#f6ce01", 1]
-				]
-			})
+			gradient
 		};
 	}
 };

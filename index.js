@@ -1,9 +1,5 @@
-import VueGpickr from './src/gradient-picker/VueGpickr.vue';
-import LinearGradient from './src/gradient-picker/LinearGradient';
-
-export default VueGpickr;
-
-export {
-	VueGpickr,
-	LinearGradient
-};
+import comp from "./src/gradient-picker/gradientPicker.vue";
+comp.install = (v) => {
+	v.component(comp.name, comp);
+}
+export default comp;

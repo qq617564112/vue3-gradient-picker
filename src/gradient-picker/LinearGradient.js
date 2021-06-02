@@ -1,4 +1,3 @@
-import tinycolor from 'tinycolor2';
 import {
 	Gradient,
 	GradientError
@@ -55,21 +54,20 @@ class LinearGradient extends Gradient {
 		return null;
 	}
 
-	toString(colorFormat = 'hex8') {
+	toString() {
 		const stops = this.stops
 			.slice()
 			.sort((a, b) => a[POSITION] - b[POSITION])
-			.map(stop => `${tinycolor(stop[COLOR]).toString(colorFormat)} ${(stop[POSITION] * 100).toFixed()}%`)
+			.map(stop => `${stop[COLOR]} ${(stop[POSITION] * 100).toFixed()}%`)
 			.join(', ');
 		return `linear-gradient(${this.angle}deg, ${stops})`;
 	}
 
-	toRaw(colorFormat = 'hex8') {
+	toRaw() {
 		const stops = this.stops
 			.slice()
 			.sort((a, b) => a[POSITION] - b[POSITION])
 			.map(stop => {
-				stop[COLOR] = tinycolor(stop[COLOR]).toString(colorFormat);
 				return stop;
 			});
 		return {

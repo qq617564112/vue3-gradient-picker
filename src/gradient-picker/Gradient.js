@@ -8,8 +8,8 @@ class GradientError extends Error {
 }
 
 const defaultStops = [
-	['0359b5', 0],
-	['f6ce01', 1]
+	['#0359b5', 0],
+	['#f6ce01', 1]
 ];
 
 const COLOR = 0;
