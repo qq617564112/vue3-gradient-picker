@@ -4,9 +4,8 @@
 	</div>
 </template>
 
-<script>
-import gradientPicker from "v3";
-// import LinearGradient from "./gradient-picker/LinearGradient";
+<script >
+import gradientPicker from "../packages/gradientPicker";
 import { ref } from "vue";
 export default {
 	components: {
